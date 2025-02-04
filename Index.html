@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAWA - Plataforma de Cómics</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="book-icon">📚</span>
+                    MAWA
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar cómics...">
+                    <button class="search-button">🔍</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="upload-btn">Subir Obra</button>
+                <a href="Perfil.html">
+                        <button class="icon-btn">👤</button>
+                </a>
+                <button class="icon-btn">⚙️</button>
+            </div>
+        </div>
+    </nav>
+    
+    <nav class="nav-container">
+        <div class="genre-nav">
+            <div class="genre-container">
+                <button id="toggle-genres" class="genre-toggle">Géneros ▼</button>
+                <div id="genre-list" class="genre-list">
+                    <button class="genre-btn">Fantasía</button>
+                    <button class="genre-btn">Acción</button>
+                    <button class="genre-btn">Romance</button>
+                    <button class="genre-btn">Terror</button>
+                    <button class="genre-btn">Cotidiano</button>
+                    <button class="genre-btn">Comedia</button>
+                    <button class="genre-btn">Deporte</button>
+                    <button class="genre-btn">Ciencia ficción</button>
+                    <button class="genre-btn">Suspenso</button>
+                    <button class="genre-btn">Otros</button>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown('orderDropdown')">
+                        En orden de popularidad
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="orderDropdown" class="dropdown-content">
+                        <a href="#">Más populares</a>
+                        <a href="#">Más recientes</a>
+                        <a href="#">Alfabético</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown('langDropdown')">
+                        ES
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="langDropdown" class="dropdown-content">
+                        <a href="#">ES</a>
+                        <a href="#">EN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Toggle dropdown menus
+        function toggleDropdown(dropdownId) {
+            document.getElementById(dropdownId).classList.toggle("show");
+        }
+
+        // Close dropdowns when clicking outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (const dropdown of dropdowns) {
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        // Handle genre selection
+        const genreLinks = document.querySelectorAll('.genre-link');
+        genreLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                genreLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Sección de obras destacadas -->
+            <section class="featured-works">
+                <h2>Obras Destacadas</h2>
+                <div class="works-grid">
+
+                <a href="Sololeveling.html">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="PortadaComic/Sololeveling.jpeg" alt="Berserk">
+                        </div>
+                        <div class="work-info">
+                            <button class="icon-btn">Solo Leveling</button>
+                            <div></div>
+                            <button class="icon-btn">Chu-Gong</button>
+                            <div></div>
+                            <p class="readers">👥 125,000 lectores</p> 
+                        </div>
+                    </div>
+                  </a>
+
+                  <a href="Bluelock.html">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="PortadaComic/Bluelock.jpeg" alt="Berserk">
+                        </div>
+                        <div class="work-info">
+                            <button class="icon-btn">Bluelock</button>
+                            <div></div>
+                            <button class="icon-btn">Muneyuki</button>
+                            <div></div>
+                            <p class="readers">👥 123,000 lectores</p> 
+                        </div>
+                    </div>
+                  </a>
+
+                  <a href="ChainsawMan.html">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="PortadaComic/Chainsaw Man Cover.jpeg" alt="Berserk">
+                        </div>
+                        <div class="work-info">
+                            <button class="icon-btn">ChainsawMan</button>
+                            <div></div>
+                            <button class="icon-btn">Tatsuki Fujimoto</button>
+                            <div></div>
+                            <p class="readers">👥 120,000 lectores</p> 
+                        </div>
+                    </div>
+                  </a>
+
+                  <a href="NarutoShippuden.html">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="PortadaComic/Naruto Shippuden.jpeg" alt="Berserk">
+                        </div>
+                        <div class="work-info">
+                            <button class="icon-btn">NarutoShippuden</button>
+                            <div></div>
+                            <button class="icon-btn">Masashi Kishimoto</button>
+                            <div></div>
+                            <p class="readers">👥 119,000 lectores</p> 
+                        </div>
+                    </div>
+                  </a>
+
+                  <a href="Inuyasha.html">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="PortadaComic/Inuyasha.jpeg" alt="Berserk">
+                        </div>
+                        <div class="work-info">
+                            <button class="icon-btn">Inuyasha</button>
+                            <div></div>
+                            <button class="icon-btn">Rumiko Takahashi</button>
+                            <div></div>
+                            <p class="readers">👥 118,500 lectores</p> 
+                        </div>
+                    </div>
+                  </a>
+
+                  <a href="Myheroacademia.html">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="PortadaComic/Myheroacademia.jpeg" alt="Berserk">
+                        </div>
+                        <div class="work-info">
+                            <button class="icon-btn">My Hero Academia</button>
+                            <div></div>
+                            <button class="icon-btn">kohei horikoshi</button>
+                            <div></div>
+                            <p class="readers">👥 116,000 lectores</p> 
+                        </div>
+                    </div>
+                  </a>
+
+
+                   
+              </div>
+            
+        </section>
+     </div>
+    </main>
+    
+    <div class="container">
+        <!-- Tu contenido principal aquí -->
+        
+        <div class="trending-sidebar">
+            <div class="trending-header">
+                <i icon-name="trending-up" class="trending-icon"></i>
+                <h2>Tendencias</h2>
+            </div>
+            
+            <div class="trending-scroll">
+
+                <div class="separator"></div>
+
+                <!-- Lista de tendencias -->
+                <div class="trending-list">
+                    <div class="trending-item">
+                        <span class="rank">01</span>
+                        <div class="item-info">
+                            <h3>Dragon's Path</h3>
+                            <p class="author">Alex Chen</p>
+                            <p class="readers">250k lectores</p>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <span class="rank">02</span>
+                        <div class="item-info">
+                            <h3>City Lights</h3>
+                            <p class="author">Maria Garcia</p>
+                            <p class="readers">180k lectores</p>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <span class="rank">03</span>
+                        <div class="item-info">
+                            <h3>Shadow Realm</h3>
+                            <p class="author">James Wilson</p>
+                            <p class="readers">150k lectores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inicializar los íconos de Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+       
+ 
+                    
+</body>
+</html>
