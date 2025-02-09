@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - MAWA</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="book-icon">📚</span>
+                    <a href="index.html">MAWA</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar cómics...">
+                    <button class="search-button">🔍</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="upload-btn">Subir Obra</button>
+                <a href="Perfil.html">
+                    <button class="icon-btn">👤</button>
+                </a>
+                <button class="icon-btn">⚙️</button>
+            </div>
+        </div>
+    </nav>
+   <!-- Barra de navegación -->
+   <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="book-icon">📚</span>
+                <a href="index.html">MAWA</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar cómics...">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="upload-btn">Subir Obra</button>
+            <a href="Perfil.html">
+                <button class="icon-btn">👤</button>
+            </a>
+            <button class="icon-btn">⚙️</button>
+        </div>
+    </div>
+</nav>
+
+<nav class="nav-container">
+    <div class="genre-nav">
+        <div class="controls">
+            <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown('orderDropdown')">
+                      Géneros
+                    <i class="arrow"></i>
+                </button>
+                <div id="orderDropdown" class="dropdown-content">
+                    <a href="#">Fantasía</a>
+                    <a href="#">Acción</a>
+                    <a href="#">Romance</a>
+                    <a href="#">Comedia</a>
+                    <a href="#">Deporte</a>
+                    <a href="#">Ciencia ficción</a>
+                    <a href="#">Suspenso</a>
+                    <a href="#">Otros</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown('langDropdown')">
+                    En orden de popularidad
+                    <i class="arrow"></i>
+                </button>
+                <div id="langDropdown" class="dropdown-content">
+                    <a href="#">Más populares</a>
+                    <a href="#">Más recientes</a>
+                    <a href="#">Alfabético</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+ <div class="container">
+
+    <!-- Sección de Perfil (Izquierda, pero más pequeña) -->
+    <div class="profile-section">
+        <img src="../Mawa/PortadaComic/Bluelock.jpeg" alt="Imagen de perfil" class="profile-img">
+        <h2>Bluelock</h2>
+        <div class="creator-description">
+            <h3>Muneyuki</h3>
+            <p>es un mangaka japonés originario de Osaka, Japón. 
+                Actualmente trabaja para Kōdansha, Ltd. 
+                y es conocido por su trabajo en Blue Lock.</p>
+        </div>
+    </div>
+
+    <!-- Sección de Sinopsis (Parte superior central) -->
+    <div class="synopsis">
+        <h2>Sinopsis</h2>
+        <p>Tras una desastrosa derrota en el Mundial 2018, la selección de Japón lucha por recuperarse. 
+            ¿Pero qué le falta? Un delantero absoluto, que pueda guiarles hacia la victoria. 
+            La Asociación de Fútbol de Japón está empeñada en crear un delantero con hambre de gol y sed de victoria, 
+            que pueda ser el instrumento decisivo para dar la vuelta a un partido perdido… y para ello ha reunido a 300 
+            de los mejores y más brillantes jugadores juveniles de Japón, encerrándolos en un centro conocido como “Blue Lock”. 
+            ¿Quién se convertirá en el líder del equipo? ¿Será capaz de superar a todos los que se interpongan en su camino?</p>
+    </div>
+
+    <!-- Sección de Seguidores (Toda la derecha) -->
+    <div class="followers">
+        <h2>Seguidores</h2>
+        <ul>
+            <li>federico2872</li>
+            <li>marco</li>
+            <li>Perez</li>
+            <li>martin</li>
+            <li>sagrario</li>
+            <li>juan23</li>
+        </ul>
+    </div>
+
+    <!-- Lista de Episodios (Parte inferior central) -->
+    <div class="episodes">
+        <h2>Lista de Episodios</h2>
+        <ul>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/Bluelockcapitulo01.webp" alt="Ep 1">
+                <span>Capítulo 1: Introducción</span>
+            </li>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/Bluelockcapitulo02.jpg" alt="Ep 2">
+                <span>Capítulo 2: Primer Encuentro</span>
+            </li>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/Bluelockcapitulo03.jpg" alt="Ep 3">
+                <span>Capítulo 3: Batalla Épica</span>
+            </li>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/Bluelockcapitulo04.jpg" alt="Ep 4">
+                <span>Capítulo 4: Nuevo Desafío</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+                  
+</body>
+</html>

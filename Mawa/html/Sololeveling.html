@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - MAWA</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="book-icon">📚</span>
+                    <a href="index.html">MAWA</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar cómics...">
+                    <button class="search-button">🔍</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="upload-btn">Subir Obra</button>
+                <a href="Perfil.html">
+                    <button class="icon-btn">👤</button>
+                </a>
+                <button class="icon-btn">⚙️</button>
+            </div>
+        </div>
+    </nav>
+    
+   
+    <nav class="nav-container">
+        <div class="genre-nav">
+            <div class="controls">
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown('orderDropdown')">
+                          Géneros
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="orderDropdown" class="dropdown-content">
+                        <a href="#">Fantasía</a>
+                        <a href="#">Acción</a>
+                        <a href="#">Romance</a>
+                        <a href="#">Comedia</a>
+                        <a href="#">Deporte</a>
+                        <a href="#">Ciencia ficción</a>
+                        <a href="#">Suspenso</a>
+                        <a href="#">Otros</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown('langDropdown')">
+                        En orden de popularidad
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="langDropdown" class="dropdown-content">
+                        <a href="#">Más populares</a>
+                        <a href="#">Más recientes</a>
+                        <a href="#">Alfabético</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+ <div class="container">
+
+    <!-- Sección de Perfil (Izquierda, pero más pequeña) -->
+    <div class="profile-section">
+        <img src="../Mawa/PortadaComic/Sololeveling.jpeg" alt="Imagen de perfil" class="profile-img">
+        <h2>Sololeveling</h2>
+        <div class="creator-description">
+            <a href="Chu-gong.html">
+                <button class="icon-btn">Chu-Gong👤</button>
+        </a>
+            <p>es un autor de manga coreano conocido por su obra 
+            «Solo Leveling» publicada por la editorial Norma Editorial.
+             Chu-Gong se enfoca en el género de manga y ha publicado varios libros en este género. 
+             Además de «Solo Leveling», Chu-Gong ha escrito «I Alone Level-Up» y «The Second Coming of Gluttony».</p>
+        </div>
+    </div>
+
+    <!-- Sección de Sinopsis (Parte superior central) -->
+    <div class="synopsis">
+        <h2>Sinopsis</h2>
+        <p>Lo que no te mata te hace más fuerte, pero en el caso de 
+            Sung Jinwoo, lo que lo mató lo hizo más fuerte. 
+            Después de ser brutalmente asesinado por monstruos 
+            en una mazmorra de alto rango, Jinwoo regresó con el Sistema, 
+            un programa que solo él puede ver y que eleva su nivel en todos los sentidos.
+             Ahora, está decidido a descubrir los secretos detrás de sus poderes y la mazmorra que los engendró.</p>
+    </div>
+
+    <!-- Sección de Seguidores (Toda la derecha) -->
+    <div class="followers">
+        <h2>Seguidores</h2>
+        <ul>
+            <li>Mario2872</li>
+            <li>munaya</li>
+            <li>gonzalo</li>
+            <li>cielo</li>
+            <li>Angel</li>
+            <li>pablo32</li>
+        </ul>
+    </div>
+
+    <!-- Lista de Episodios (Parte inferior central) -->
+    <div class="episodes">
+        <h2>Lista de Episodios</h2>
+        <ul>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/sololevelingcapitulo01.jpg" alt="Ep 1">
+                <span>Capítulo 1: Introducción</span>
+            </li>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/sololevelingcapitulo02.jpg" alt="Ep 2">
+                <span>Capítulo 2: Primer Encuentro</span>
+            </li>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/sololevelingcapitulo03.webp" alt="Ep 3">
+                <span>Capítulo 3: Batalla Épica</span>
+            </li>
+            <li>
+                <img src="../Mawa/Imagendecapitulo/sololevelingcapitulo04.jpg" alt="Ep 4">
+                <span>Capítulo 4: Nuevo Desafío</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+                  
+</body>
+</html>

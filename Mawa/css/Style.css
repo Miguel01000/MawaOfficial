@@ -1,0 +1,515 @@
+/* Variables y reset */
+
+:root {
+    --primary-color: #2E2A5C;
+    --secondary-color: #4AA3FF;
+    --search-bg: #3B3777;
+    --text-light: #ffffff;
+    --text-gray: #666666;
+    --card-bg: #ffffff;
+}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+/*barra de menu*/
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+            width: 100%;
+            background-color: #1a1b26;
+            padding: 1rem;
+            border-bottom: 1px solid #2f3042;
+
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    color: #2e86c1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--search-bg);
+    color: var(--text-light);
+}
+
+.search-container input::placeholder {
+    color: #9ca3af;
+}
+
+.search-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            color: white;
+        }
+        /* contenedor de perfil*/
+.profile-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+ 
+        /* Sección izquierda del perfil */
+ .profile-left {
+            width: 25%;
+            text-align: center;
+        }
+ /* Imagen de perfil */
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 70%;
+            border: 5px solid transparent;
+            background: linear-gradient(to right, #ff8a00, #e52e71);
+            padding: 3px;
+        }
+
+        /* Cuadro de descripción del creador */
+        .profile-description {
+            background-color: #2e86c1;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #444;
+            margin-top: 15px;
+        }
+        
+        .profile-description h3 {
+            margin-bottom: 5px;
+        }
+   /* Sección de las obras */
+        .profile-main {
+            width: 50%;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+ /* Main content styles */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+        .work-card {
+            background-color: #2e86c1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+       
+        .work-card img {
+            width: 70%;
+            border-radius: 5px;
+             height: 200%;
+         object-fit: cover;
+        }      
+       
+
+        /* Sección de seguidores */
+        .profile-right {
+            width: 20%;
+            background-color: #2e86c1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        /* Botones de seguidores dentro de rectángulos */
+        .follower-btn {
+            display: block;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            padding: 8px;
+            margin: 5px 0;
+            border: none;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .follower-btn:hover {
+            background-color: #00bfff;
+        }
+/* Lista de tendencias */
+.separator {
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 1rem 0;
+}
+
+.trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trending-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #666;
+    min-width: 2ch;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    
+    .nav-left {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+    }    
+   
+}
+        .genre-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+          /* ventanas desplegable del menu*/
+        .dropdown-button {
+            background-color: #2f3042;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2f3042;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #404259;
+        }
+      /* permite ver los menus ocultos*/
+        .show {
+            display: block;
+        }
+
+        .arrow {
+            border: solid #ffffff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+        }
+
+        @media (max-width: 768px) {
+            .genres {
+                gap: 1rem;
+            }
+            
+            .controls {
+                flex-wrap: wrap;
+            }
+        }
+
+        /*barra de generos*/
+        .genre-list {
+            display: none; /* Oculto por defecto */
+            position: absolute;
+            background: #222;
+            border-radius: 5px;
+            padding: 10px;
+            flex-direction: column;
+            width: 150px;
+        }
+        
+        .genre-btn {
+            background: none;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .genre-btn:hover {
+            background: #333;
+        }
+        
+        /* Ajustes para el botón de despliegue */
+        .genre-toggle {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        
+        .genre-toggle:hover {
+            background-color: #666;
+        }
+        
+        
+       
+        
+       /*diceño de la barra de busqueda*/
+        .search-container {
+            display: flex;
+            background-color: #3b3b3b;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        .search-container input {
+            background: none;
+            border: none;
+            color: white;
+            padding: 5px;
+        }
+        
+        .search-container button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+/*solo leveling pagina*/
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+/* Contenedor principal con grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sección del perfil (Izquierda pero más pequeña) */
+.profile-section {
+    background: #2e86c1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #333;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.creator-description {
+    margin-top: 15px;
+    background: #2A2A2A;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Sección de Sinopsis (Arriba en el centro) */
+.synopsis {
+    background: #2C1F57;
+    padding: 20px;
+    border-radius: 10px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+    border: 1px solid #3A3A3A;
+}
+
+/* Sección de Seguidores (Toda la derecha) */
+.followers {
+    background: #2e86c1;
+    padding: 20px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.followers h2 {
+    margin-bottom: 10px;
+}
+
+.followers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.followers li {
+    padding: 5px 0;
+    background: #666;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Lista de Episodios (Centrada abajo) */
+.episodes {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+.episodes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.episodes li {
+    display: flex;
+    align-items: center;
+    background: #444;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 80%;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.episodes li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
